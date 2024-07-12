@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&text=AmreshKua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* :root {
+  scroll-padding-top: 76px;
+} */
+.App {
+  text-align: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+.title {
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  transform-origin: bottom left;
+  transform: rotate(90deg) translate(-50%, -50%);
+  color: white;
+  z-index: 5;
+}
+.scroll-top {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+.tilt::after {
+  content: " ";
+  border-bottom: 70vh solid #34495e;
+  border-left: 6vw solid transparent;
+  position: absolute;
+  top: 0;
+  width: 97%;
+  right: 0;
+}
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#b88746, #fdf5a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.animation-btn {
+  transform-origin: bottom;
+  margin-left: 2%;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: 20;
+}
+@keyframes bounce {
+  from {
+    /* transform: translate3d(0, 0, 0); */
+    transform: rotate(45deg);
+  }
+  to {
+    /* transform: translate3d(0, 200px, 0); */
+    transform: rotate(-45deg);
+  }
+}
+.box:after {
+  content: " ";
+  border-top: 100vh solid #008ce6;
+  border-right: 100vw solid transparent;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.next:after {
+  content: " ";
+  border-bottom: 100vh solid #008ce6;
+  border-right: 100vw solid transparent;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+button:disabled {
+  background-color: rgba(134, 20, 248, 0.6) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+@media (max-width: 1172px) {
+  .title {
+    transform: rotate(0deg);
+    top: auto;
+    bottom: 0%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tilt::after {
+    content: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .App {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+  }
+}
+@media (max-width: 900px) {
+  .title {
+    font-size: 2.75rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem !important;
+    z-index: 5;
+  }
+  .box:after {
+    content: none;
+  }
+  .next:after {
+    content: none;
+  }
+  #Skills {
+    margin-top: 8% !important;
+  }
+}
+@media (max-width: 781px) {
+  .about-me-para {
+    line-height: 1.25 !important;
+  }
+}
+@media (max-height: 480px) {
+  #intro {
+    overflow: hidden;
+    padding-top: 12%;
+  }
+  #SayHi {
+    height: 100%;
+  }
+  .intro-name {
+    font-size: 1.4rem !important;
+  }
+  .input2 {
+    margin-top: 10px !important;
+  }
+  .next {
+    height: auto;
+  }
+  .box {
+    height: auto;
+  }
+  .next:after {
+    content: none;
+  }
+  .box:after {
+    content: none;
+  }
+  .tilt::after {
+    border-bottom: 87vh solid #34495e;
+  }
+  #AboutMe {
+    align-items: flex-end;
+  }
+  .about-me-container {
+    height: 87% !important;
+  }
+  .title {
+    font-size: 2rem !important;
+  }
+  .about-me-para {
+    font-size: 1.25rem !important;
+    line-height: 1.1 !important;
+  }
+  #Skills {
+    height: auto;
+    padding-bottom: 5%;
+  }
+  .Skill-wrapper {
+    min-height: 100vh;
+    height: auto !important;
+  }
+  .cardSkill {
+    max-height: 280px;
+    min-width: 225px;
+    padding-top: 5px !important;
+    margin-top: 10%;
+  }
+  .cardSkill div {
+    padding-top: 0px !important;
+  }
+  .project-card {
+    height: 50% !important;
+    margin: 2px 0 !important;
+    flex-direction: row !important;
+  }
+  .project-card-media {
+    padding-left: 2px !important;
+  }
+  .project-content {
+    padding: 0 !important;
+    padding-right: 10px !important;
+  }
+  .project-btn {
+    justify-content: end !important;
+  }
+}

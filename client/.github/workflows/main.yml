@@ -1,0 +1,23 @@
+name: Portfolio
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: "${{secrets.HOST}}"
+          username: "${{secrets.USERNAME}}"
+          key: "${{secrets.SSH_PRIVATE_KEY}}"
+          port: "${{secrets.SSH_PORT}}"
+          script: |
+            cd /var/www/next/portfolio
+            git pull
+            sudo rm -rf node_modules
+            sudo rm -rf build
+            sudo npm install
+            sudo npm run build
