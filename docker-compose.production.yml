@@ -11,7 +11,7 @@ services:
     networks:
       - portfolio-production
 
-  production-server-production:
+  portfolio-server-production:
     image: portfolio-server-production:${ENV}
     restart: unless-stopped
     env_file:
