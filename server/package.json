@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "set DEBUG=amresh-kumar-server:server && nodemon ./bin/www"
+    "dev": "set DEBUG=amresh-kumar-server:server && nodemon -L ./bin/www",
+    "docker:build": "docker build -t portfolio-server-production:production ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,6 +18,7 @@
     "node-mailjet": "^5.0.1"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "nodemon": "^3.1.4"
   }
 }

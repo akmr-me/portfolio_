@@ -35,6 +35,7 @@ function App() {
     window.addEventListener("scroll", visible);
     return () => window.removeEventListener("scroll", visible);
   }, []);
+
   return (
     <div className="App">
       <Navbar setAlert={setAlert} />

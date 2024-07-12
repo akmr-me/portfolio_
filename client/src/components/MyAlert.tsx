@@ -39,7 +39,7 @@ const MyAlert = ({ alert, setAlert }: MyAlertProps) => {
       open={alert.open}
       autoHideDuration={6000}
       onClose={handleClose}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
     >
       <div>
         <Alert

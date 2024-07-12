@@ -54,7 +54,7 @@ export default function MyCard({
           variant="body2"
           sx={{
             fontSize: "1.124rem",
-            lineHeight: "1.75rem",
+            lineHeight: "1.5rem",
             textAlign: "justify",
             color: hover ? "rgba(0,0,0,1)" : "rgba(0,0,0,0.8)",
           }}

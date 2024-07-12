@@ -59,17 +59,22 @@ const About = ({ myClass, setAlert }: AboutProps) => {
             className="about-me-para"
             sx={{
               padding: "20px 40px",
-              fontSize: { sm: "1.5rem", xs: "1.25rem", textAlign: "justify" },
+              fontSize: { sm: "1.40rem", xs: "1.25rem", textAlign: "justify" },
               lineHeight: { sm: "1.5", xs: "1.75rem" },
               // paddingTop: { xs: "12%", sm: "0" },
               paddingRight: "60px",
               fontFamily: "'Montserrat', sans-serif",
             }}
           >
-            I'm a JavaScript developer. I am capable of working with several
+            {/* I'm a JavaScript developer. I am capable of working with several
             technologies, including HTML, CSS, JavaScript, NodeJs, React Js,
             MongoDB, etc. A B.E graduate in C.S.E. I'm from Bihar and I
-            currently call Bengaluru home.
+            currently call Bengaluru home. */}
+            I am full stack developer with 2 years of experience, I excel in
+            HTML, CSS, JavaScript, NodeJs, React Js, and MongoDB. Holding a B.E.
+            degree in C.S.E., I quickly progressed to leading a small team
+            within 6 months of joining. Additionally, I have expertise in
+            deploying applications on VPS.
           </Typography>
         </Box>
 

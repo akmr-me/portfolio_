@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  portfolio-client:
+    container_name: portfolio-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile.${ENV}
+    stdin_open: true
+    ports:
+      - "7000:7000"
+    networks:
+      - portfolio
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - FAST_REFRESH=false
+      - WDS_SOCKET_PORT=7000
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
+
+  portfolio-server:
+    container_name: portfolio-server
+    build: ./server/
+    ports:
+      - "7001:7001"
+    networks:
+      - portfolio
+    env_file:
+      - ./server/${ENV}.env
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+
+networks:
+  portfolio:
+    driver: bridge
