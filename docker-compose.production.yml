@@ -5,9 +5,10 @@ services:
     image: portfolio-client-production:${ENV}
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
-    #voulmes:
+      - "7080:80"
+      - "7443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
     networks:
       - portfolio-production
 
@@ -17,7 +18,7 @@ services:
     env_file:
       - ./server/${ENV}.env
     ports:
-      - 7001:7001
+      - "7001:7001"
     networks:
       - portfolio-production
 
