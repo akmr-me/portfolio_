@@ -26,7 +26,7 @@ const SocialMedia = ({ setAlert }: SocialMediaProps) => {
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/amresh-kumar-07b012185"
+          href="https://www.linkedin.com/in/akmr-me"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -51,7 +51,7 @@ const SocialMedia = ({ setAlert }: SocialMediaProps) => {
       </li>
       <li>
         <a
-          href="https://github.com/amresh-kumar-singh"
+          href="https://github.com/akmr-me"
           target="_blank"
           rel="noopener noreferrer"
         >
