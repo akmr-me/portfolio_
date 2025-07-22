@@ -11,6 +11,7 @@ import projects from "./info/projects";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 import IconButton from "@mui/material/IconButton";
 import MyAlert from "src/components/MyAlert";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [visibility, setVisibility] = useState(false);
@@ -56,6 +57,7 @@ function App() {
           <ArrowCircleUpOutlinedIcon fontSize="large" />
         </IconButton>
       )}
+      <Analytics />
     </div>
   );
 }
