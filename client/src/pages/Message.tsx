@@ -131,12 +131,20 @@ const Message = ({ myClass, setAlert }: MessageProps) => {
             sx={{
               width: "80%",
               minHeight: "80%",
-              background: "#EC87C0",
+              background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
               color: "white",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               flexDirection: "column",
+              borderRadius: "16px",
+              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: "0 16px 48px rgba(0, 0, 0, 0.3)",
+              },
             }}
           >
             <CardContent
@@ -147,20 +155,71 @@ const Message = ({ myClass, setAlert }: MessageProps) => {
                 justifyContent: "center",
                 flexDirection: "column",
                 height: "80%",
+                textAlign: "center",
+                padding: "32px 24px",
               }}
             >
               <Typography
                 variant="h4"
-                sx={{ fontSize: { md: "2.15rem", xs: "1.75rem" } }}
+                sx={{
+                  fontSize: { md: "1.5rem", xs: "1rem" },
+                  fontWeight: 600,
+                  marginBottom: "16px",
+                  letterSpacing: "-1px",
+                }}
               >
-                Hire Me
+                Let's Collaborate
               </Typography>
-              <Typography variant="caption">or</Typography>
-              <Typography variant="subtitle1" width="auto">
-                Just say Hi
+
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "12px",
+                  opacity: 0.9,
+                  marginBottom: "8px",
+                  fontWeight: 300,
+                }}
+              >
+                or
+              </Typography>
+
+              <Typography
+                variant="h6"
+                sx={{
+                  fontSize: { md: "1.4rem", xs: "1.2rem" },
+                  fontWeight: 400,
+                  opacity: 0.95,
+                }}
+              >
+                Just say Hello
               </Typography>
             </CardContent>
-            <CardActions className="thank-you">Thank You</CardActions>
+
+            <CardActions
+              className="thank-you"
+              sx={{
+                paddingBottom: "24px",
+              }}
+            >
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  opacity: 0.8,
+                  padding: "8px 24px",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  borderRadius: "24px",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    opacity: 1,
+                  },
+                }}
+              >
+                Get in Touch
+              </Typography>
+            </CardActions>
           </Card>
         </Stack>
         <Stack className="say-hi-card2" width="70%" spacing={{ xs: 2, sm: 4 }}>

@@ -9,13 +9,13 @@ export default [
     demo: "https://www.akmr.me",
   },
   {
-    name: "Crypto Tracker",
-    shortDetail: "React js app",
+    name: "Plug-n-Play Workflow Builder",
+    shortDetail: "Custom automation platform",
     details:
-      "Crypto tracker tracks the current price of famous cryptocurrencies. This project I did by seeing a youtube tutorial and the channel name is Roadside coder. Here I have implemented React Router 6 and MUI 5.",
-    pic: "crypto",
-    repo: "https://github.com/akmr-me/crypto-tracker",
-    demo: "https://crypto.akmr.me/",
+      "A visual workflow automation platform that allows users to create, manage, and schedule tasks using a node-based interface. Built with Next.js, FastAPI, PostgreSQL, and LangGraph, this SaaS supports triggers, background scheduling, API/webhook integration, error handling, credential management, and real-time execution.",
+    pic: "plugnplay", // update image asset accordingly
+    repo: "https://github.com/akmr-me/plugnplay", // change to actual repo if public
+    demo: "https://plugnplay.cc/", // change to actual domain
   },
   {
     name: "My Portfolio",
